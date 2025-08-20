@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import NameCheckerForm from './components/NameCheckerForm';
+import LanguageBlockedWordListResolver from './util/LanguageBlockedListResolver';
+import GameType from './model/GameType';
+import Language from './model/Language';
 
 function App() {
   return (
@@ -19,6 +23,7 @@ function App() {
           (Site in development)
         </a>
       </header>
+      <NameCheckerForm blockedWordResolver={new LanguageBlockedWordListResolver(GameType.ELDEN_RING_NIGHTREIGN, Language.English)}/>
     </div>
   );
 }

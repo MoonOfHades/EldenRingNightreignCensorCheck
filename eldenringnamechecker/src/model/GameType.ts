@@ -1,0 +1,7 @@
+enum Game {
+    ELDEN_RING,
+    ELDEN_RING_NIGHTREIGN,
+    ESCAPE_FROM_MERIDELL_CASTLE_REMASTERED
+}
+
+export default Game;
