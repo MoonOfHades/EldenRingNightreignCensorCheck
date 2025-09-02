@@ -42,6 +42,6 @@ For the censored name previews with the "\*"'s included, I implemented and tweak
 
 - [Fromsoft Image Macro Creator](https://rezuaq.be/new-area/image-creator/) ([GitHub](https://github.com/Sibert-Aerts/sibert-aerts.github.io)) was used for creating some of the banner images used on the UI.
 
-### Disclaimer
+## Disclaimer
 
 This is a fan project, and is not endorsed by or affiliated with FromSoftware, Inc.
