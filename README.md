@@ -12,10 +12,6 @@ Names are censored if they contain anything from a list of blocked words/phrases
 
 Use this tool to check if your cool/funny name will make it past the filter.
 
-## Support
-
-If you find this tool useful, any support is greatly appreciated! Consider [donating some runes](https://ko-fi.com/moonofhades) if you can spare any.
-
 ## Dev Notes and Limitations:
 
 - This tool will be maintained on a best-effort basis. I'm not sure how often the blocked word lists change (if at all), but I'll try to periodically keep them up to date as updates come in, with Nightreign as a priority. Feel free to [open an issue](https://github.com/MoonOfHades/EldenRingNightreignCensorCheck/issues) if you notice some cases where the checker is inaccurate, but note the below detail:
