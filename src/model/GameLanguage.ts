@@ -27,7 +27,7 @@ class GameLanguage {
     'chinese_simplified',
   );
   static readonly PortugueseLatinAmerica = new GameLanguage(
-    'Portuguese - Latin America',
+    'Portuguese (Latin America)',
     'portuguese_latin_america',
   );
   static readonly Thai = new GameLanguage('Thai', 'thai');
