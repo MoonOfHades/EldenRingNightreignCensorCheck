@@ -4,7 +4,7 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/EldenRingNightreignNameChecker/',
+  base: '/EldenRingNightreignCensorCheck/',
   plugins: [react(), svgr()],
   build: {
     cssCodeSplit: false,
