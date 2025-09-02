@@ -25,14 +25,14 @@ If you find this tool useful, any support is greatly appreciated! Consider [dona
 - Due to the nature of this project, the repository contains text files with a lot of bad words in multiple languages. I did not use text to speech for this :)
 
 ### Censor check implementation assumptions:
-For the censored name previews with the "\*"'s included, I implemented and tweaked the logic based on real examples that I've experienced, and common cases ike "Crucible K***ht" along with the following assumptions. This may be updated over time if there were edge cases I missed or misinterpreted. Assumptions:
+
+For the censored name previews with the "\*"'s included, I implemented and tweaked the logic based on real examples that I've experienced, and common cases ike "Crucible K\*\*\*ht" along with the following assumptions. This may be updated over time if there were edge cases I missed or misinterpreted. Assumptions:
 
 - Nightreign and Elden Ring use the same censoring logic, but not the same blocked word lists
 - When multiple blocked words are in a name, they are censored in priority order from longest to shortest (example: "asshole" matches blocked words: [asshole, hole, ass, ss, ho]. The output in-game is \*\*\*\*\*\*\*)
 - The censor check is not case-sensitive (though it was in some previous games)
 - The censor check ignores spaces, and will censor blocked words that are broken up by space (example: if "hello" is a blocked word, "h ello" will be fully censored as "\*\*\*\*\*\*")
-    - In my implementation I've extended this behavior to apply any non-letter or number character (example: "h.ello" should still be censored the same way), but this is an unconfirmed assumption.
-
+  - In my implementation I've extended this behavior to apply any non-letter or number character (example: "h.ello" should still be censored the same way), but this is an unconfirmed assumption.
 
 ## Special thanks
 

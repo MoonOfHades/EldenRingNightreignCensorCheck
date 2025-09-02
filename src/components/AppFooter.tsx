@@ -20,7 +20,7 @@ export default function AppFooter() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          View Source Code on Github
+          View Source Code on GitHub
         </Link>
       </Stack>
     </>

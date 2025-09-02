@@ -32,6 +32,7 @@ function NameInputForm(props: NameCheckerFormProps) {
   const checkNameCensor = useCallback(
     (name: string) => {
       if (!name) {
+        setBlockedWordsForName(undefined);
         return;
       }
       // Check the word both with spaces/punctuation and without (some blocked word lists have phrases with spaces in them)
@@ -61,16 +62,18 @@ function NameInputForm(props: NameCheckerFormProps) {
 
   // Re-check current input when blockedWordFinder changes (language selection change)
   useEffect(() => {
-    if (inputNameValue) {
-      checkNameCensor(inputNameValue);
-    }
+    checkNameCensor(inputNameValue);
   }, [checkNameCensor]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let newValue = e.target.value;
-    setInputNameValue(newValue.substring(0, maxNameLengthForGame(props.game)));
+    const truncatedValue = newValue.substring(
+      0,
+      maxNameLengthForGame(props.game),
+    );
+    setInputNameValue(truncatedValue);
 
-    checkNameCensor(newValue);
+    checkNameCensor(truncatedValue);
   };
 
   let nameIsBlocked = !!blockedWordsForName;
