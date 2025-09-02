@@ -416,3 +416,9 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+/build/*
+dist/*
+
+# Ignore JSON and txt files from scripts directory (for regenerating blocked word lists)
+scripts/*.txt
+scripts/*.json
