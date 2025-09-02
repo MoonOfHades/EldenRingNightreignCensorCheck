@@ -5,10 +5,10 @@ import {
   TextField,
   TextFieldProps,
 } from '@mui/material';
-import Game from '../model/Game';
+import Game, { maxNameLengthForGame } from '../model/Game';
 
 export type ThemedTextFieldProps = TextFieldProps & {
-  variantStyle?: Game;
+  variantStyle: Game;
   sx?: SxProps;
 };
 
@@ -201,6 +201,9 @@ export function EldenRingTextField(props: ThemedTextFieldProps) {
           inputMode: 'text',
         }}
         slotProps={{
+          htmlInput: {
+            maxLength: maxNameLengthForGame(props.variantStyle!),
+          },
           input: {
             onKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => {
               if (e.key === 'Enter') {

@@ -1,5 +1,5 @@
 import { Theme } from '@emotion/react';
-import { createTheme } from '@mui/material';
+import { createTheme, darkScrollbar } from '@mui/material';
 
 export const baseTheme: Theme = createTheme({
   typography: {
@@ -24,5 +24,14 @@ export const darkTheme = createTheme({
   ...baseTheme,
   palette: {
     mode: 'dark',
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        html: {
+          ...darkScrollbar(),
+        },
+      },
+    },
   },
 });
