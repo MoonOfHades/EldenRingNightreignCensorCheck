@@ -66,7 +66,7 @@ export default function BlockedListAccordion(props: BlockedListAccordionProps) {
             sx={{
               // Extend to the bottom-ish of the viewport on mobile
               // On desktop, use arbitrarily chosen height
-              maxHeight: { xs: 'calc(100svh - 220px)', md: 500 },
+              maxHeight: { xs: 'calc(100svh - 240px)', md: 400 },
               overflowY: 'auto',
               pr: 1,
             }}

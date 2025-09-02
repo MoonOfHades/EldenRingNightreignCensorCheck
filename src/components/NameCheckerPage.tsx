@@ -96,6 +96,9 @@ function NameCheckerPage(props: NameCheckerPageProps) {
           disabled={nameInputDisabled}
           onClick={props.onClick}
         />
+
+        {/* Extra space for dono widget */}
+        <Box sx={{ height: { xs: 2, md: 4 } }} />
       </Stack>
     </Box>
   );

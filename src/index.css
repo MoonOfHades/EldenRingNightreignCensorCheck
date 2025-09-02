@@ -74,4 +74,5 @@ code {
   right: 16px !important;
   bottom: 16px !important;
   z-index: 9999 !important;
+  pointer-events: auto !important;
 }

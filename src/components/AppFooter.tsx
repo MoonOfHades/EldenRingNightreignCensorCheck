@@ -4,7 +4,7 @@ import { GH_REPOSITORY_LINK } from '../constants/AppConstants';
 export default function AppFooter() {
   return (
     <>
-      <Stack spacing={1}>
+      <Stack spacing={1} sx={{ mb: { xs: 4, md: 8 } }}>
         <Divider variant='fullWidth' />
         <Typography
           alignSelf='center'

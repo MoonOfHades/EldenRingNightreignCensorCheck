@@ -170,7 +170,7 @@ function App() {
             </Toolbar>
           </AppBar>
 
-          <Box>
+          <Box sx={{ pb: { xs: 6, md: 10 } }}>
             <StyledTabs
               value={selectedTabValue}
               onChange={handleTabChange}
