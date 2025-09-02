@@ -20,7 +20,7 @@ import { EldenRingTextField } from './EldenRingTextField';
 
 export type ThemedTextFieldProps = TextFieldProps & {
   variantStyle?: Game;
-  sx?: SxProps; // still allow sx passthrough
+  sx?: SxProps;
 };
 
 function NameInputForm(props: NameCheckerFormProps) {

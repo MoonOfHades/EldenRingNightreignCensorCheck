@@ -7,9 +7,6 @@ import ftfy
 # Utility for parsing the JSON text export files created by Smithbox because I have no idea how to dump the text entries straight to .txt (if that's supported).
 # Outputs unique blocked words as a multi-line text file that will need to be renamed and placed in the expected directory for the game/language, ex: /public/assets/badwords/eldenring/french.txt
 # Blocked word lists will be maintained on a best-effort basis.
-
-
-
 def main():
     parser = argparse.ArgumentParser(description="Extract unique Text entries from Smithbox export JSON.")
     parser.add_argument("-input_file", "--input_file", help="Path to the JSON file", required=True)
@@ -62,7 +59,7 @@ def clean_text(text):
     cleaned = ftfy.fixes.remove_control_chars(cleaned)
     cleaned = ftfy.fix_text(
         cleaned,
-        # NFC still had issues with Arabic, use NFNC mode
+        # NFC still had issues with Arabic, use NFKC mode
         normalization='NFKC'
     )
     

@@ -9,7 +9,7 @@ import Game from '../model/Game';
 
 export type ThemedTextFieldProps = TextFieldProps & {
   variantStyle?: Game;
-  sx?: SxProps; // still allow sx passthrough
+  sx?: SxProps;
 };
 
 const hoverPulse = keyframes`
@@ -59,8 +59,8 @@ export function EldenRingTextField(props: ThemedTextFieldProps) {
           outlineColorFocus: 'rgba(67,67,56,255)',
           bgColorFocus: 'rgba(19,20,16,255)',
           boxShadowFocus: '0 0 10px rgba(255,255,255,0.06)',
-          // Elden Ring name input box is thinner than the Nightreign one in-game, but causes shifting
-          // on mobile so I'll keep the margins the same here (previously had -.2rem on top and -.3rem on bottom)
+          // Elden Ring name input box is thinner than the Nightreign one in-game, but that causes shifting
+          // on mobile, so I'll keep the margins the same here (previously had -.2rem on top and -.3rem on bottom)
           marginTop: '0rem',
           marginBottom: '0rem',
           marginTopFocus: '0rem',
@@ -81,7 +81,7 @@ export function EldenRingTextField(props: ThemedTextFieldProps) {
       borderRadius: 0,
       transition: 'background-color 180ms ease, box-shadow 180ms ease',
 
-      // Add outline on focus
+      // Add outline on focus based on in-game colors
       '&.Mui-focused fieldset': {
         borderColor: variantConfig.outlineColorFocus,
       },

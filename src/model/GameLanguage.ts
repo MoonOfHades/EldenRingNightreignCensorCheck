@@ -33,6 +33,7 @@ class GameLanguage {
   static readonly Thai = new GameLanguage('Thai', 'thai');
   static readonly Arabic = new GameLanguage('Arabic', 'arabic');
 
+  // Update to be per-game if supported languages ever diverge
   static values(): GameLanguage[] {
     return [
       this.English,

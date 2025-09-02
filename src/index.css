@@ -71,7 +71,7 @@ code {
 #kofi-widget-overlay,
 [id^='kofi-widget'] {
   left: auto !important;
-  right: 16px !important; /* adjust as needed */
-  bottom: 16px !important; /* keep off the edge */
+  right: 16px !important;
+  bottom: 16px !important;
   z-index: 9999 !important;
 }

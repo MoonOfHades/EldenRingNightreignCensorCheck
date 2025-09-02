@@ -7,10 +7,12 @@ const TAB_INDICATOR_IMAGE_URL = getPublicImagePath('grace-border-centered.png');
 
 const INDICATOR_HEIGHT = 1.429;
 
+// Change tab text size based on screen size
 const commonTabSx = {
-  typography: { xs: 'h6', lg: 'h5' }, // responsive variant
+  typography: { xs: 'h6', lg: 'h5' },
 };
 
+// Elden ring tab with gold text style
 export const EldenRingTabLabel = ({ selected }: { selected: boolean }) => (
   <Typography
     component='span'
@@ -64,7 +66,6 @@ export const StyledGameTab = styled(Tab)({
     color: 'inherit',
     backgroundColor: 'transparent',
     // Shadow to make label text stand out a bit more against the glow
-    // drop-shadow(offsetX offsetY blurRadius color)
     filter: 'drop-shadow(0 0.286rem 0.571rem rgba(0,0,0,0.8))',
   },
 
