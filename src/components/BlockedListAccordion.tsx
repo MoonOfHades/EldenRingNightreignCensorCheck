@@ -6,10 +6,10 @@ import {
   Paper,
   Typography,
 } from '@mui/material';
-import SentimentNeutralIcon from '@mui/icons-material/SentimentNeutral';
 import React, { useState, useRef, useEffect } from 'react';
 import Game from '../model/Game';
 import GameLanguage from '../model/GameLanguage';
+import { getPublicImagePath } from '../util/AssetUtils';
 
 interface BlockedListAccordionProps {
   game: Game;
@@ -46,18 +46,43 @@ export default function BlockedListAccordion(props: BlockedListAccordionProps) {
       slotProps={{ transition: { unmountOnExit: true } }}
     >
       <AccordionSummary
-        expandIcon={<SentimentNeutralIcon />}
+        expandIcon={
+          <img
+            src={getPublicImagePath('golden-order-icon.png')}
+            alt='expand'
+            style={{
+              width: '40px',
+              height: '40px',
+              margin: '-8px',
+            }}
+          />
+        }
         aria-controls='blocked-list-content'
         id='blocked-list-header'
       >
-        <Typography
-          component='span'
-          variant='body1'
-          align='center'
-          width='100%'
-        >
-          <strong>View blocked word list</strong>
-        </Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+          <img
+            src={getPublicImagePath('golden-order-icon.png')}
+            alt='list'
+            style={{
+              width: '40px',
+              height: '40px',
+              margin: '-8px 12px -8px -8px',
+              transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)',
+              transition: 'transform 0.3s ease',
+            }}
+          />
+          <Typography
+            component='span'
+            variant='body1'
+            sx={{
+              flex: 1,
+              textAlign: 'center',
+            }}
+          >
+            View blocked word list
+          </Typography>
+        </Box>
       </AccordionSummary>
       <AccordionDetails sx={{ p: 0 }}>
         {expanded && (

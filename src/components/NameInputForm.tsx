@@ -89,6 +89,7 @@ function NameInputForm(props: NameCheckerFormProps) {
       'banner-what-is-your-name.png',
       'banner-name-censored.png',
       'banner-filter-passed.png',
+      'golden-order-icon.png',
     ];
     sources.forEach((src) => {
       const img = new Image();

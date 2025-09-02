@@ -9,7 +9,10 @@ export default function AppFooter() {
         <Typography
           alignSelf='center'
           variant='body1'
-          sx={{ color: 'rgba(255, 255, 255, 0.7)' }}
+          sx={{
+            color: 'rgba(255, 255, 255, 0.7)',
+            px: { xs: 0.5, md: 0 },
+          }}
         >
           Fan project. Not affiliated with or endorsed by FromSoftware, Inc.
         </Typography>
