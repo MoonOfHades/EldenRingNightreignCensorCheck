@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family:
+    'Cormorant Garamond',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Alternatie to pure white for dark mode */
+.dark-mode-white {
+  color: #f0f8ff;
+}
+
+/* Mimic logo with a gradient because I don't want to worry about aligning an image with the app header text */
+.gold-text {
+  font-size: inherit;
+  font-weight: bold;
+  background-image: linear-gradient(
+    to bottom,
+    #462523 0,
+    #cb9b51 22%,
+    #f6e27a 45%,
+    #f6f2c0 50%,
+    #f6e27a 55%,
+    #cb9b51 78%,
+    #462523 100%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* Same but Nightreign */
+.silver-text {
+  font-size: inherit;
+  font-weight: bold;
+  background-image: linear-gradient(
+    to bottom,
+    #aaaaaa 0%,
+    #5555aa 12%,
+    #ffffff 20%,
+    #d1d4d8 28%,
+    #787999 45%,
+    #ffffff 55%,
+    #5555aa 70%,
+    #aaaaaa 85%,
+    #ffffff 92%,
+    #aaaaaa 100%
+  );
+
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+#kofi-widget,
+#kofi-widget-overlay,
+[id^='kofi-widget'] {
+  left: auto !important;
+  right: 16px !important; /* adjust as needed */
+  bottom: 16px !important; /* keep off the edge */
+  z-index: 9999 !important;
+}

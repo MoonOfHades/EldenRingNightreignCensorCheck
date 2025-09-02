@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+# Not sure if having the blocked word lists crawlable would mess with indexing of this site
+Disallow: /assets/*
