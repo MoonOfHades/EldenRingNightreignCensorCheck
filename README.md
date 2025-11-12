@@ -2,7 +2,7 @@
 
 Name censor checking tool for Elden Ring Nightreign (and base Elden Ring) multiplayer. Hosted on Github Pages at:
 
-### https://moonofhades.github.io/EldenRingNightreignCensorCheck/
+## https://moonofhades.github.io/EldenRingNightreignCensorCheck/
 
 ## Context
 
