@@ -5,6 +5,7 @@ import os
 import ftfy
 
 # Utility for parsing the JSON text export files created by Smithbox because I have no idea how to dump the text entries straight to .txt (if that's supported).
+# Smithbox output location: <drive>/Elden Ring Nightreign Unpacked Files\.smithbox\Workflow\Exported Text
 # Outputs unique blocked words as a multi-line text file that will need to be renamed and placed in the expected directory for the game/language, ex: /public/assets/badwords/eldenring/french.txt
 # Blocked word lists will be maintained on a best-effort basis.
 def main():
