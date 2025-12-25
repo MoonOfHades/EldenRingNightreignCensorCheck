@@ -23,7 +23,12 @@ def main():
     # Name output file based on "Name" property
     base_name = data.get("Name", "output")
     timestamp_ms = int(time.time() * 1000)
-    output_filename = f"{base_name}-{timestamp_ms}.txt"
+    # Got tired of renaming all of the files, just remove .json and add .txt if missing
+    #output_filename = f"{base_name}-{timestamp_ms}.txt".replace(".json","")
+    output_filename = f"{base_name}".replace(".json","")
+    if not ".txt" in output_filename:
+        output_filename = output_filename + ".txt"
+
 
     unique_text = set()
 
