@@ -1,6 +1,11 @@
 /* We have Agmena font at home */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 
+/* Fix horizontal scrollbar showing on widget button on desktop*/
+[id^='kofi-wo-container'] {
+  width: fit-content !important;
+}
+
 .App {
   text-align: center;
 }
