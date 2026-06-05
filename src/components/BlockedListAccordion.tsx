@@ -118,7 +118,7 @@ export default function BlockedListAccordion(props: BlockedListAccordionProps) {
                   whiteSpace: 'pre-wrap',
                   wordBreak: 'break-word',
                 }}
-                className='dark-mode-white'
+                className='dark-mode-white notranslate'
               >
                 {blockedWordsList.join('\n')}
               </Box>

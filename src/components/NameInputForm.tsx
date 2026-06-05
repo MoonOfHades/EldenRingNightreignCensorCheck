@@ -140,7 +140,7 @@ function NameInputForm(props: NameCheckerFormProps) {
               <Typography color={'error'} variant='h6'>
                 Your name is censored:
               </Typography>
-              <Typography variant='body1'>
+              <Typography variant='body1' className='notranslate'>
                 {generateBlockedNamePreview(
                   inputNameValue,
                   blockedWordsForName!,
@@ -150,7 +150,7 @@ function NameInputForm(props: NameCheckerFormProps) {
               <Typography variant='body1' color='error'>
                 Blocked words:
               </Typography>
-              <Typography variant='body2'>
+              <Typography variant='body2' className='notranslate'>
                 {blockedWordsForName?.join(', ')}
               </Typography>
             </Stack>
