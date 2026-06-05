@@ -25,21 +25,30 @@ import {
   StyledGameTab,
   StyledTabs,
 } from './components/CustomTabs';
+import {
+  getSavedGame,
+  getSavedLanguage,
+  saveSelectedGame,
+  saveSelectedLanguage,
+} from './util/UserPreferences';
 
 function App() {
   const [selectedTabValue, setSelectedTabValue] = useState(
-    Game.ELDEN_RING_NIGHTREIGN,
+    () => getSavedGame() ?? Game.ELDEN_RING_NIGHTREIGN,
   );
   const [selectedLanguage, setSelectedLanguage] = useState(
-    GameLanguage.English,
+    () => getSavedLanguage() ?? GameLanguage.English,
   );
 
   const handleTabChange = (event: React.SyntheticEvent, value: Game) => {
     setSelectedTabValue(value);
+    saveSelectedGame(value);
   };
 
   const handleLanguageChange = (event: SelectChangeEvent) => {
-    setSelectedLanguage(GameLanguage.fromLabel(event.target.value));
+    const language = GameLanguage.fromLabel(event.target.value);
+    setSelectedLanguage(language);
+    saveSelectedLanguage(language);
   };
 
   const languages = GameLanguage.values();
