@@ -203,6 +203,7 @@ export function EldenRingTextField(props: ThemedTextFieldProps) {
         slotProps={{
           htmlInput: {
             maxLength: maxNameLengthForGame(props.variantStyle!),
+            autoComplete: 'off',
           },
           input: {
             onKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => {
